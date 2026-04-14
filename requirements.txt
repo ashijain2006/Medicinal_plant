@@ -4,6 +4,6 @@ torchvision
 timm
 pillow
 gdown
-gunicorn
 pandas
-opencv-python-headless
+gunicorn
+opencv-python-headless==4.8.1.78
