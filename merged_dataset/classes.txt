@@ -1,0 +1,70 @@
+Aloevera
+Alpinia Galanga (Rasna)
+Amaranthus Viridis (Arive-Dantu)
+Amla
+Amruta_Bali
+Aral
+Artocarpus Heterophyllus (Jackfruit)
+Ashoka
+Ashwagandha
+Avacado
+Azadirachta Indica (Neem)
+Bamboo
+Basale
+Basella Alba (Basale)
+Betel
+Betel_Nut
+Brahmi
+Brassica Juncea (Indian Mustard)
+Carissa Carands (Karanda)
+Castor
+Citrus Limon (Lemon)
+Curry_Leaf
+Doddapatre
+Ekka
+Ficus Auriculata (Roxburgh fig)
+Ficus Religiosa (Peepal Tree)
+Ganike
+Gauva
+Geranium
+Henna
+Hibiscus
+Hibiscus Rosa-sinensis
+Honge
+Insulin
+Jasmine
+Jasminum(Jasmine)
+Lemon
+Lemon_grass
+Mangfera Indica (Mango)
+Mango
+Mentha (Mint)
+Mint
+Moringa Olerifera (Drumstick)
+Muntingia Calabura (Jamaica Cherry_Gasagase)
+Murraya Koenigii (Curry)
+Negadali
+Neem
+Nerium Oleander (Oleander)
+Nithyapushpa
+Nooni
+Nycatanthes Arbor_tristis (Parijata)
+Ocimum Tenuiflorum (Tulsi)
+Pappaya
+Pepper
+Piper Betle (Betel)
+Plectranthus Amboinicus (Mexican Mint)
+Pomegranate
+Ponagamia Pinnata (india Beech)
+Psidium Guajava (Guava)
+Punica Grantum (Pomegranate)
+Raktachandini
+Rose
+Santalum Album (Sandalwood)
+Sapota
+Syzygium Cumini (Jamun)
+Syzygium Jambos (Rose Apple)
+Tabernaemontana Divaricata(Crape Jasmine)
+Trignella Foenum-graecum (Fenugreek)
+Tulasi
+Wood_sorel
