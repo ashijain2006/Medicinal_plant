@@ -72,7 +72,7 @@ transform = transforms.Compose([
 ])
 
 # =========================
-# UI ROUTE (🔥 UPDATED)
+# UI ROUTE
 # =========================
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -85,8 +85,8 @@ def home():
         img_tensor = transform(img).unsqueeze(0).to(device)
         img_tensor.requires_grad = True
 
-        with torch.enable_grad():
-            output = model(img_tensor)
+        # 🔥 Forward pass (NO torch.no_grad)
+        output = model(img_tensor)
 
         probs = torch.softmax(output, dim=1)[0]
         pred = torch.argmax(probs).item()
@@ -125,17 +125,18 @@ def home():
     return render_template("index.html")
 
 # =========================
-# API ROUTE (UNCHANGED)
+# API ROUTE
 # =========================
 @app.route("/predict", methods=["POST"])
 def predict():
     file = request.files["file"]
 
     img = Image.open(file).convert("RGB")
-    img = transform(img).unsqueeze(0).to(device)
+    img_tensor = transform(img).unsqueeze(0).to(device)
 
+    # API can use no_grad (faster)
     with torch.no_grad():
-        output = model(img)
+        output = model(img_tensor)
 
     probs = torch.softmax(output, dim=1)[0]
     pred = torch.argmax(probs).item()
