@@ -6,3 +6,4 @@ pillow
 gdown
 gunicorn
 pandas
+opencv-python-headless
