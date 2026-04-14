@@ -24,7 +24,7 @@ import os
 
 if not os.path.exists("model.pth"):
     url = "https://drive.google.com/uc?id=1K2GDj9DV-Cz6mUMSMf-1m2Pq_i0_2y0_"
-    gdown.download(url, "model.pth", quiet=False, fuzzy=True, use_cookies=False)
+    gdown.download(url, "model.pth", quiet=False)
 
 model.load_state_dict(torch.load("model.pth", map_location=device))
 model.to(device)
