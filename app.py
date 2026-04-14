@@ -10,13 +10,20 @@ app = Flask(__name__)
 
 device = "cpu"
 
-class_names = sorted(os.listdir("merged_dataset"))
+with open("merged_dataset/classes.txt") as f:
+    class_names = [line.strip() for line in f]
 
 model = timm.create_model(
     "vit_base_patch16_224_dino",
     pretrained=False,
     num_classes=len(class_names)
 )
+
+import gdown
+
+if not os.path.exists("model.pth"):
+    url = "https://drive.google.com/uc?id=1K2GDj9DV-Cz6mUMSMf-1m2Pq_i0_2y0"
+    gdown.download(url, "model.pth", quiet=False)
 
 model.load_state_dict(torch.load("model.pth", map_location=device))
 model.to(device)
@@ -35,7 +42,7 @@ def home():
 def predict():
     file = request.files["file"]
     img = Image.open(file).convert("RGB")
-    img = transform(img).unsqueeze(0)
+    img = transform(img).unsqueeze(0).to(device)
 
     with torch.no_grad():
         output = model(img)
