@@ -5,3 +5,4 @@ timm
 pillow
 gdown
 gunicorn
+pandas
