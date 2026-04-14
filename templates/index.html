@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicinal Plant AI</title>
+</head>
+
+<body style="text-align:center; font-family:Arial; background:#f0f0f0;">
+
+    <h1>🌿 Medicinal Plant AI + XAI</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div style="margin-top:20px; background:white; padding:20px;">
+            <h2>Prediction: {{ prediction }}</h2>
+            <h3>Confidence: {{ confidence }}</h3>
+            <p>{{ info }}</p>
+
+            <h3>🔥 Model Attention (XAI)</h3>
+            <img src="{{ image_path }}" width="300">
+        </div>
+    {% endif %}
+
+</body>
+</html>
